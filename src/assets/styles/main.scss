@@ -1,0 +1,13 @@
+// override bootstrap variables
+// $primary: yellow;
+// $secondary: $gray-600;
+// $success: $green;
+// $info: $cyan;
+// $warning: $yellow;
+// $danger: $red;
+// $light: $gray-100;
+// $dark: $gray-800;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import "./common/variables.scss";
