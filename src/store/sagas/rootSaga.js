@@ -1,8 +1,9 @@
 import { all, spawn, call } from "redux-saga/effects";
 import counterSagas from "./counterSagas";
+import utilSagas from "./utilSagas";
 
 function* rootSaga() {
-  const sagas = [...counterSagas];
+  const sagas = [...counterSagas, ...utilSagas];
 
   yield all(
     sagas.map((saga) =>

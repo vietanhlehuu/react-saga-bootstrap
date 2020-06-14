@@ -11,7 +11,14 @@ const Admin = () => {
       <p>{number}</p>
       <button
         onClick={() => {
-          dispatch(actionUtils.registerLoading(counterActions.increase(2)));
+          dispatch(
+            actionUtils.registerCallback(
+              actionUtils.registerLoading(counterActions.increase(2)),
+              (meta) => {
+                console.log(meta);
+              }
+            )
+          );
         }}
       >
         +
