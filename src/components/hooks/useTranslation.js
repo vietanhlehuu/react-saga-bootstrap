@@ -1,5 +1,5 @@
-import { useIntl } from "react-intl";
-import { useCallback } from "react";
+import { useIntl } from 'react-intl';
+import { useCallback } from 'react';
 
 export const useTranslation = () => {
   const intl = useIntl();
@@ -11,10 +11,10 @@ export const useTranslation = () => {
         },
         {
           ...(option ?? {}),
-        }
+        },
       );
     },
-    [intl]
+    [intl],
   );
   return t;
 };

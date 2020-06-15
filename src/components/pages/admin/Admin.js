@@ -3,13 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { counterSelectors, counterActions } from 'store/ducks/CounterDuck';
 import { actionUtils } from 'store/helpers/actionUtils';
 import { useTranslation } from 'components/hooks/useTranslation';
+import Page from 'components/common/page/Page';
 
 const Admin = () => {
   const number = useSelector(counterSelectors.getNumber);
   const dispatch = useDispatch();
   const t = useTranslation();
   return (
-    <div>
+    <Page title="Admin">
       <p>{number}</p>
       <p>{t('HELLO')}</p>
       <button
@@ -27,7 +28,7 @@ const Admin = () => {
       <button type="button" onClick={null}>
         -
       </button>
-    </div>
+    </Page>
   );
 };
 

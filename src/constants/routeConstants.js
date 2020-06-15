@@ -1,7 +1,7 @@
 export const RoutePath = {
-  login: "/login",
-  admin: "/admin",
-  forgetPassword: "/forget-password",
-  logout: "/logout",
-  resetPassword: "/reset-password",
+  auth: '/auth',
+  login: '/auth/login',
+  signup: '/auth/signup',
+  admin: '/admin',
+  notFound: '/404.html',
 };

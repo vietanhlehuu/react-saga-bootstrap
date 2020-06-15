@@ -1,10 +1,10 @@
-import { combineReducers } from "redux";
-import { connectRouter } from "connected-react-router";
-import { reduxResources } from "constants/constants";
+import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
+import { reduxResources } from 'constants/constants';
 
-import { alertReducer } from "./AlertDuck";
-import { counterReducer } from "./CounterDuck";
-import { langReducer } from "./LanguageDuck";
+import { alertReducer } from './AlertDuck';
+import { counterReducer } from './CounterDuck';
+import { langReducer } from './LanguageDuck';
 
 const staticReducer = {
   [reduxResources.ALERT]: alertReducer,

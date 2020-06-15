@@ -5,7 +5,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-merge": "npm install"
+      "post-merge": "yarn"
     }
   },
   "lint-staged": {
@@ -30,8 +30,10 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-intl": "^4.6.9",
     "react-redux": "^7.2.0",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redux-saga": "^1.1.3",

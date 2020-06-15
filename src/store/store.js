@@ -1,15 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import { history } from "routes/history";
-import { routerMiddleware } from "connected-react-router";
-import createSagaMiddleware from "redux-saga";
+import { history } from 'routes/history';
+import { routerMiddleware } from 'connected-react-router';
+import createSagaMiddleware from 'redux-saga';
 
-import createReducer from "./ducks/rootReducer";
-import rootSaga from "./sagas/rootSaga";
-import { languageConstants, reduxResources } from "constants/constants";
+import { languageConstants, reduxResources } from 'constants/constants';
+import createReducer from './ducks/rootReducer';
+import rootSaga from './sagas/rootSaga';
 
 let language =
-  localStorage.getItem("lang") || "vi" || navigator.language.split(/[-_]/)[0]; // language without region code
+  localStorage.getItem('lang') || 'vi' || navigator.language.split(/[-_]/)[0]; // language without region code
 if (!Object.values(languageConstants).includes(language)) {
   language = languageConstants.VI;
 }
