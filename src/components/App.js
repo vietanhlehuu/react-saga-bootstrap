@@ -1,10 +1,10 @@
-import React, { Suspense } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-import "../assets/styles/main.scss";
-import { appRoutes } from "routes/appRoutes";
-import { RoutePath } from "constants/constants";
-import ScrollToTop from "./common/scroll-to-top/ScrollToTop";
+import '../assets/styles/main.scss';
+import { appRoutes } from 'routes/appRoutes';
+import { RoutePath } from 'constants/constants';
+import ScrollToTop from './common/scroll-to-top/ScrollToTop';
 
 function App() {
   return (
