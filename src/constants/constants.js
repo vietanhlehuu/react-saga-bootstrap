@@ -4,6 +4,12 @@ const reduxResources = {
   ALERT: "alert",
   LOADING: "loading",
   COUNTER: "counter",
+  LANGUAGE: "language",
 };
 
-export { RoutePath, reduxResources };
+const languageConstants = {
+  VI: "vi",
+  EN: "en",
+};
+
+export { RoutePath, reduxResources, languageConstants };

@@ -6,6 +6,13 @@ import createSagaMiddleware from "redux-saga";
 
 import createReducer from "./ducks/rootReducer";
 import rootSaga from "./sagas/rootSaga";
+import { languageConstants, reduxResources } from "constants/constants";
+
+let language =
+  localStorage.getItem("lang") || "vi" || navigator.language.split(/[-_]/)[0]; // language without region code
+if (!Object.values(languageConstants).includes(language)) {
+  language = languageConstants.VI;
+}
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,6 +21,9 @@ const store = configureStore({
   middleware: [routerMiddleware(history), sagaMiddleware],
   devTools: {
     shouldHotReload: true,
+  },
+  preloadedState: {
+    [reduxResources.LANGUAGE]: language,
   },
 });
 
