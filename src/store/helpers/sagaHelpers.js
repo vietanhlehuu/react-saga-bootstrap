@@ -1,6 +1,6 @@
-import { put, call, takeEvery, takeLatest } from "redux-saga/effects";
-import { loadingActions } from "store/ducks/LoadingDuck";
-import { actionUtils } from "./actionUtils";
+import { put, call, takeEvery, takeLatest } from 'redux-saga/effects';
+import { loadingActions } from 'store/ducks/LoadingDuck';
+import { actionUtils } from './actionUtils';
 
 function* workerRegistation(worker, action) {
   const meta = {
